@@ -10,7 +10,5 @@ namespace fluxor_generic.Store
     /// </summary>
     public class IntReducers:GenericReducers<int>
     {
-        public int ForceInstantiationOfChild { get; }
-        public IntReducers() { ForceInstantiationOfChild = 1; }
     }
 }
