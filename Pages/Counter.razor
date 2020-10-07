@@ -1,0 +1,15 @@
+﻿@inherits Fluxor.Blazor.Web.Components.FluxorComponent
+
+@typeparam TData
+@inject IState<GenericState<TData>> State
+@inject IDispatcher Dispatcher
+
+
+<h1>Counter</h1>
+
+<p>Current count: @State.Value.Counter</p>
+
+<button class="btn btn-primary" @onclick="()=>
+                                          Dispatcher.Dispatch(new IncrementCountAction<int>())"
+        >Click me</button>
+
